@@ -26,6 +26,9 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Server1.c" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{a34c7093-8108-466e-820e-bd1191caa94b}</ProjectGuid>
     <Keyword>Linux</Keyword>
@@ -60,8 +63,9 @@
   <ImportGroup Label="Shared" />
   <ImportGroup Label="PropertySheets" />
   <PropertyGroup Label="UserMacros" />
-  <ItemGroup>
-  </ItemGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
+    <IncludePath>C:\Program Files %28x86%29\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\include\Linux\arm-linux-gnueabihf;C:\Program Files %28x86%29\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.11.25503\include\Linux;$(IncludePath)</IncludePath>
+  </PropertyGroup>
   <ItemDefinitionGroup />
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets" />
